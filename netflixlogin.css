@@ -1,0 +1,630 @@
+/* ===================================
+   NETFLIX LOGIN PAGE - RESPONSIVE CSS
+   Based on official Netflix design
+   =================================== */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #141414;
+  color: white;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===================================
+   NAVBAR / HEADER
+   =================================== */
+
+.navbar-primary-class {
+  width: 100%;
+  height: auto;
+  min-height: clamp(50px, 10vw, 92px);
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: clamp(12px, 2vw, 20px) clamp(16px, 3vw, 40px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 0;
+  padding: 0;
+}
+
+.logo {
+  width: clamp(100px, 20vw, 300pxx);
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+/* ===================================
+   LOGIN FORM CONTAINER
+   =================================== */
+
+.login-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(30px, 5vw, 60px) clamp(16px, 3vw, 40px);
+  text-align: center;
+  color: white;
+  gap: clamp(16px, 2vw, 24px);
+}
+
+/* Main Heading */
+.login1 {
+  font-size: clamp(26px, 6vw, 50px);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  color: white;
+}
+
+/* Subtitle */
+.login2 {
+  font-size: clamp(13px, 2.5vw, 16px);
+  font-weight: 400;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0.9;
+}
+
+/* ===================================
+   EMAIL INPUT BOX
+   =================================== */
+
+.email-box {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: clamp(12px, 2vw, 16px);
+  width: 100%;
+  max-width: 450px;
+  margin: clamp(20px, 3vw, 30px) auto 0;
+  padding: 0;
+}
+
+/* Input Field */
+#emailOrPhone {
+  width: 100%;
+  padding: clamp(12px, 1.5vw, 16px);
+  font-size: clamp(13px, 1.8vw, 16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background-color: rgba(131, 81, 81, 0.5);
+  color: white;
+  outline: none;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  font-family: inherit;
+}
+
+#emailOrPhone:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 8px rgba(229, 9, 20, 0.2);
+}
+
+#emailOrPhone::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Continue Button */
+.email-box button {
+  width: 100%;
+  padding: clamp(12px, 1.5vw, 16px);
+  background-color: #e50914;
+  color: white;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+}
+
+.email-box button:hover {
+  background-color: #cc0000;
+  transform: scale(1.02);
+}
+
+.email-box button:active {
+  transform: scale(0.98);
+}
+
+/* ===================================
+   GET HELP / FAQ SECTION
+   =================================== */
+
+.get-help {
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 1.5vw, 12px);
+  width: 100%;
+  max-width: 450px;
+  margin: clamp(20px, 3vw, 30px) auto 0;
+  padding: clamp(10px, 1.5vw, 14px) clamp(12px, 2vw, 16px);
+  font-size: clamp(13px, 2vw, 16px);
+  background: transparent;
+  border: none;
+  transition: all 0.3s ease;
+  user-select: none;
+  min-height: 44px;
+}
+
+.get-help:hover {
+  opacity: 0.8;
+}
+
+.get-help h3 {
+  margin: 0;
+  font-size: clamp(13px, 2vw, 16px);
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Arrow Icon */
+.arrow {
+  display: inline-block;
+  font-size: clamp(12px, 2vw, 14px);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.arrow.up {
+  transform: rotate(180deg);
+}
+
+/* ===================================
+   FAQ ANSWER (DROPDOWN)
+   =================================== */
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.faq-answer.show {
+  max-height: 500px;
+  padding: clamp(12px, 1.5vw, 16px);
+  margin-top: clamp(8px, 1.5vw, 12px);
+}
+
+.faq-answer p {
+  margin: 0;
+  font-size: clamp(12px, 1.8vw, 14px);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* ===================================
+   RECAPTCHA SECTION
+   =================================== */
+
+.recaptcha-section {
+  width: 100%;
+  max-width: 450px;
+  margin: clamp(20px, 3vw, 40px) auto 0;
+  padding: clamp(12px, 2vw, 16px);
+  text-align: center;
+  font-size: clamp(11px, 1.5vw, 13px);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.recaptcha-section a {
+  color: #e50914;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.recaptcha-section a:hover {
+  color: #ff4444;
+  text-decoration: underline;
+}
+
+/* ===================================
+   MOBILE RESPONSIVE (320px - 640px)
+   =================================== */
+
+@media (max-width: 640px) {
+  body {
+    min-height: 100vh;
+  }
+
+  .navbar-primary-class {
+    min-height: 48px;
+    padding: 10px 16px;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .login-form {
+    padding: 40px 16px;
+    gap: 12px;
+  }
+
+  .login1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .login2 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .email-box {
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  #emailOrPhone {
+    padding: 12px 14px;
+    font-size: 16px; /* Prevent iOS zoom */
+    min-height: 44px;
+  }
+
+  .email-box button {
+    padding: 12px 16px;
+    font-size: 15px;
+    min-height: 44px;
+  }
+
+  .get-help {
+    margin-top: 20px;
+    padding: 12px 16px;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .get-help h3 {
+    font-size: 14px;
+  }
+
+  .faq-answer {
+    max-width: 100%;
+  }
+
+  .faq-answer.show {
+    padding: 12px 16px;
+  }
+
+  .recaptcha-section {
+    max-width: 100%;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+}
+
+/* ===================================
+   TABLET RESPONSIVE (641px - 1024px)
+   =================================== */
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .navbar-primary-class {
+    min-height: 70px;
+    padding: 12px 32px;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  .login-form {
+    padding: 50px 32px;
+  }
+
+  .login1 {
+    font-size: 36px;
+  }
+
+  .login2 {
+    font-size: 15px;
+  }
+
+  .email-box {
+    max-width: 400px;
+    gap: 12px;
+  }
+
+  .get-help {
+    max-width: 400px;
+  }
+
+  .faq-answer {
+    max-width: 400px;
+  }
+
+  .recaptcha-section {
+    max-width: 400px;
+  }
+}
+
+/* ===================================
+   DESKTOP RESPONSIVE (1025px+)
+   =================================== */
+
+@media (min-width: 1025px) {
+  .navbar-primary-class {
+    min-height: 92px;
+    padding: 20px 60px;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .login-form {
+    padding: 60px 40px;
+  }
+
+  .login1 {
+    font-size: 48px;
+  }
+
+  .login2 {
+    font-size: 16px;
+  }
+
+  .email-box {
+    max-width: 450px;
+    gap: 16px;
+  }
+
+  #emailOrPhone {
+    padding: 14px 16px;
+  }
+
+  .email-box button {
+    padding: 14px 16px;
+  }
+
+  .get-help {
+    max-width: 450px;
+    margin-top: 24px;
+  }
+
+  .faq-answer {
+    max-width: 450px;
+  }
+
+  .recaptcha-section {
+    max-width: 450px;
+  }
+}
+
+/* ===================================
+   EXTRA LARGE (1920px+)
+   =================================== */
+
+@media (min-width: 1920px) {
+  .navbar-primary-class {
+    min-height: 100px;
+    padding: 24px 80px;
+  }
+
+  .logo {
+    width: 250px;
+  }
+
+  .login1 {
+    font-size: 56px;
+  }
+
+  .login2 {
+    font-size: 18px;
+  }
+
+  .email-box {
+    max-width: 500px;
+  }
+
+  .get-help {
+    max-width: 500px;
+  }
+
+  .faq-answer {
+    max-width: 500px;
+  }
+
+  .recaptcha-section {
+    max-width: 500px;
+  }
+}
+
+/* ===================================
+   LANDSCAPE MODE
+   =================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .navbar-primary-class {
+    min-height: 50px;
+    padding: 8px 16px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .login-form {
+    padding: 20px 16px;
+    gap: 10px;
+  }
+
+  .login1 {
+    font-size: 24px;
+  }
+
+  .login2 {
+    display: none;
+  }
+
+  .email-box {
+    margin-top: 15px;
+    gap: 10px;
+  }
+
+  .get-help {
+    margin-top: 15px;
+  }
+}
+
+/* ===================================
+   ACCESSIBILITY
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+
+  .navbar-primary-class {
+    background-color: rgba(255, 255, 255, 0.98);
+    border-bottom: 1px solid #ddd;
+  }
+
+  .login1,
+  .get-help h3 {
+    color: #333;
+  }
+
+  .login2,
+  .faq-answer p,
+  .recaptcha-section {
+    color: #666;
+  }
+
+  #emailOrPhone {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #333;
+    border-color: #ccc;
+  }
+
+  #emailOrPhone::placeholder {
+    color: #999;
+  }
+
+  #emailOrPhone:focus {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: #999;
+  }
+}
+
+/* Focus visible for accessibility */
+#emailOrPhone:focus-visible,
+.email-box button:focus-visible,
+.get-help:focus-visible {
+  outline: 2px solid #e50914;
+  outline-offset: 2px;
+}
+
+/* Touch device optimization */
+@media (hover: none) and (pointer: coarse) {
+  .email-box button:active {
+    transform: scale(0.97);
+  }
+
+  .get-help:active {
+    opacity: 0.9;
+  }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .navbar-primary-class {
+    display: none;
+  }
+
+  .email-box button {
+    display: none;
+  }
+}
+
+/* ===================================
+   UTILITY / HELPER CLASSES
+   =================================== */
+
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.mt-2 {
+  margin-top: clamp(16px, 2vw, 24px);
+}
